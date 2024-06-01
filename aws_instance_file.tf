@@ -5,4 +5,5 @@ resource "aws_instance" "this" {
  
 tenant
                  = "host"
+i added changes to this file
 }
