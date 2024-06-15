@@ -1,0 +1,18 @@
+name: my gha for Project 5
+#1 when should we run our action? :Event. things that happens on the repo. create a pull request or push and create a branch
+on: [push]
+#2 what is that you want to run?
+# a. things to run are defined in jobs. arrays
+# b. where should we run the job? runs-on
+# c. what are the steps to run
+jobs:
+check-linux-version:
+  runs-on: ubuntu-latest #linux
+  steps:
+   -uses: actions/checkout@v4
+   -name: first step is to list all items in the repository
+    run: ls
+    -name: check system memory
+    run: free
+    -name: check system data usage
+     run: df -h
